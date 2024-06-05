@@ -4,17 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a word: ");
-            string inputString = Console.ReadLine();
+            do
+            {
 
-            if (IsPalindrome(inputString))
-            {
-                Console.WriteLine($"{inputString} is a Palindrome.");
+
+                Console.WriteLine("Enter a word: ");
+                string inputString = Console.ReadLine();
+
+                if (IsPalindrome(inputString))
+                {
+                    Console.WriteLine($"{inputString} is a Palindrome.");
+                }
+                else
+                {
+                    Console.WriteLine($"{inputString} is not a palindrome");
+                }
             }
-            else
-            {
-                Console.WriteLine($"{inputString} is not a palindrome");
-            }
+            while (true);
+
         }
 
         static bool IsPalindrome(string text)
